@@ -3,7 +3,7 @@ var DicoinToken = artifacts.require("./DicoinToken.sol");
 contract('DicoinToken', function(accounts) {
     var tokenInstance;
 
-    it('initializes the contract with the correct values', function() {
+    it('Initializes the contract with the correct values', function() {
         return DicoinToken.deployed().then(function(instance) {
             tokenInstance = instance;
             return tokenInstance.name();
@@ -18,7 +18,7 @@ contract('DicoinToken', function(accounts) {
         });
     })
 
-    it('allocates the initial supply upon deployment', function() {
+    it('Allocates the initial supply upon deployment', function() {
         return DicoinToken.deployed().then(function(instance) {
             tokenInstance = instance;
             return tokenInstance.totalSupply();
@@ -56,7 +56,7 @@ contract('DicoinToken', function(accounts) {
         });
     });
 
-    it('approves tokens for delegated transfer', function() {
+    it('Approves tokens for delegated transfer', function() {
         return DicoinToken.deployed().then(function(instance) {
             tokenInstance = instance;
             return tokenInstance.approve.call(accounts[1], 100);
@@ -75,7 +75,7 @@ contract('DicoinToken', function(accounts) {
         });
     });
 
-    it('handles delegated token transfers', function() {
+    it('Handles delegated token transfers', function() {
         return DicoinToken.deployed().then(function(instance) {
             tokenInstance = instance;
             fromAccount = accounts[2];

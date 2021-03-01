@@ -6,11 +6,11 @@ contract('DicoinTokenSale', function(accounts) {
     var tokenSaleInstance;
     var admin = accounts[0];
     var buyer = accounts[1];
-    var tokenPrice = 1000000000000000; // in wei
+    var tokenPrice = 1000000000000000; // en wei
     var tokensAvailable = 750000;
     var numberOfTokens;
 
-    it('initializes the contract with the correct values', function() {
+    it('Initializes the contract with the correct values', function() {
         return DicoinTokenSale.deployed().then(function(instance) {
             tokenSaleInstance = instance;
             return tokenSaleInstance.address
@@ -25,7 +25,7 @@ contract('DicoinTokenSale', function(accounts) {
         });
     });
 
-    it('facilitates token buying', function() {
+    it('Facilitates token buying', function() {
         return DicoinToken.deployed().then(function(instance) {
             // Grab token instance first
             tokenInstance = instance;
@@ -62,7 +62,7 @@ contract('DicoinTokenSale', function(accounts) {
         });
     });
 
-    it('ends token sale', function() {
+    it('Ends token sale', function() {
         return DicoinToken.deployed().then(function(instance) {
             // Grab token instance first
             tokenInstance = instance;

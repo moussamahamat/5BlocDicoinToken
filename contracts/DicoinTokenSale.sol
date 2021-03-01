@@ -34,8 +34,8 @@ contract DicoinTokenSale {
         require(msg.sender == admin);
         require(tokenContract.transfer(admin, tokenContract.balanceOf(this)));
 
-        // UPDATE: Let's not destroy the contract here
-        // Just transfer the balance to the admin
+        // MISE À JOUR: Ne détruisons pas le contrat ici
+        // Transférons simplement le solde à l'administrateur
         admin.transfer(address(this).balance);
     }
 }
