@@ -121,7 +121,7 @@ App = {
       return instance.buyTokens(numberOfTokens, {
         from: App.account,
         value: numberOfTokens * App.tokenPrice,
-        gas: 500000 // limit de gas
+        gas: 1000000 // limit de gas
       });
     }).then(function(result) {
       console.log("Tokens bought...")
